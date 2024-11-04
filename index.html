@@ -99,35 +99,147 @@
         </ul>
     </section>
 
-    <section id="slam" class="tab-content">
+   <section id="slam" class="tab-content">
         <h2>SLAM</h2>
         <h3>Mémento SLAM</h3>
+
         <h4>C#</h4>
         <ul>
-            <li>Déclarations : <code>int x = 10;</code>, <code>string name = "John";</code>, etc.</li>
-            <li>Dates et Heures : <code>DateTime now = DateTime.Now;</code>, <code>TimeSpan duration = specificDate - now;</code>.</li>
-            <li>LINQ : <code>var evenNumbers = numbers.Where(n => n % 2 == 0).ToList();</code></li>
+            <li><strong>Déclarations et Types</strong> :
+                <ul>
+                    <li><code>int x = 10;</code> : Variable entière avec une valeur de 10.</li>
+                    <li><code>string name = "John";</code> : Chaîne de caractères contenant "John".</li>
+                    <li><code>bool isActive = true;</code> : Variable booléenne avec valeur true (vrai).</li>
+                    <li><code>double pi = 3.14159;</code> : Variable à virgule flottante.</li>
+                    <li><code>var age = 25;</code> : Inférence de type basée sur la valeur fournie.</li>
+                </ul>
+            </li>
+            <li><strong>Dates et Heures</strong> :
+                <ul>
+                    <li><code>DateTime now = DateTime.Now;</code> : Date et heure actuelles.</li>
+                    <li><code>DateTime specificDate = new DateTime(2023, 12, 25);</code> : Date définie pour le 25 décembre 2023.</li>
+                    <li><code>TimeSpan duration = specificDate - now;</code> : Différence entre deux dates.</li>
+                    <li><code>string formattedDate = now.ToString("dd/MM/yyyy");</code> : Formatage en "jour/mois/année".</li>
+                    <li><code>now.AddDays(5);</code> : Ajoute 5 jours à la date actuelle.</li>
+                </ul>
+            </li>
+            <li><strong>LINQ et Collections</strong> :
+                <ul>
+                    <li><code>List&lt;int&gt; numbers = new List&lt;int&gt; {1, 2, 3, 4};</code> : Liste d'entiers.</li>
+                    <li><code>var evenNumbers = numbers.Where(n => n % 2 == 0).ToList();</code> : LINQ pour filtrer les nombres pairs.</li>
+                    <li><code>numbers.ForEach(Console.WriteLine);</code> : Parcourt et affiche chaque élément.</li>
+                    <li><code>Dictionary&lt;string, int&gt; ages = new Dictionary&lt;string, int&gt; {{"Alice", 30}, {"Bob", 25}};</code> : Dictionnaire associant noms et âges.</li>
+                    <li><code>var sum = numbers.Aggregate((a, b) => a + b);</code> : Additionne tous les éléments d'une liste.</li>
+                </ul>
+            </li>
+            <li><strong>Asynchrone</strong> :
+                <ul>
+                    <li><code>async Task LoadData() { await Task.Delay(1000); }</code> : Méthode asynchrone avec délai de 1 seconde.</li>
+                    <li><code>await Task.Run(() => DoWork());</code> : Exécute une tâche de manière asynchrone.</li>
+                    <li><code>Task.WhenAll(task1, task2);</code> : Attend que plusieurs tâches asynchrones soient terminées.</li>
+                </ul>
+            </li>
         </ul>
 
         <h4>Java</h4>
         <ul>
-            <li>Déclarations : <code>int x = 10;</code>, <code>String name = "John";</code>, etc.</li>
-            <li>Dates et Heures : <code>LocalDate date = LocalDate.now();</code>.</li>
-            <li>Streams : <code>names.stream().filter(n -> n.startsWith("A")).forEach(System.out::println);</code></li>
+            <li><strong>Déclarations et Types</strong> :
+                <ul>
+                    <li><code>int x = 10;</code> : Variable entière.</li>
+                    <li><code>String name = "John";</code> : Chaîne de caractères.</li>
+                    <li><code>boolean isActive = true;</code> : Variable booléenne.</li>
+                    <li><code>double salary = 5000.50;</code> : Double (nombre à virgule flottante).</li>
+                </ul>
+            </li>
+            <li><strong>Dates et Heures</strong> :
+                <ul>
+                    <li><code>LocalDate date = LocalDate.now();</code> : Date actuelle.</li>
+                    <li><code>LocalTime time = LocalTime.now();</code> : Heure actuelle.</li>
+                    <li><code>LocalDateTime dateTime = LocalDateTime.of(2023, 12, 25, 15, 30);</code> : Date et heure spécifiques.</li>
+                    <li><code>Period period = Period.between(date, dateTime.toLocalDate());</code> : Différence en jours, mois, années.</li>
+                    <li><code>dateTime.plusDays(5);</code> : Ajoute 5 jours à la date actuelle.</li>
+                </ul>
+            </li>
+            <li><strong>Collections et Streams</strong> :
+                <ul>
+                    <li><code>List&lt;String&gt; names = Arrays.asList("Alice", "Bob");</code> : Création d'une liste.</li>
+                    <li><code>names.stream().filter(n -> n.startsWith("A")).forEach(System.out::println);</code> : Filtre les noms commençant par "A" et les affiche.</li>
+                    <li><code>int sum = Arrays.stream(new int[] {1, 2, 3}).sum();</code> : Somme de tous les éléments d'un tableau.</li>
+                    <li><code>Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();</code> : Map (carte) associant des clés à des valeurs.</li>
+                </ul>
+            </li>
         </ul>
 
         <h4>PHP</h4>
         <ul>
-            <li>Base : <code>$x = 10;</code>, <code>$name = "John";</code>.</li>
-            <li>Dates : <code>$now = new DateTime();</code>, <code>$formattedDate = $now->format("d/m/Y");</code>.</li>
-            <li>PDO : <code>$pdo = new PDO("mysql:host=localhost;dbname=test", "user", "password");</code>.</li>
+            <li><strong>Déclarations et Types</strong> :
+                <ul>
+                    <li><code>$x = 10;</code> : Variable entière.</li>
+                    <li><code>$name = "John";</code> : Chaîne de caractères.</li>
+                    <li><code>$isActive = true;</code> : Variable booléenne.</li>
+                </ul>
+            </li>
+            <li><strong>Gestion des Dates</strong> :
+                <ul>
+                    <li><code>$now = new DateTime();</code> : Date et heure actuelles.</li>
+                    <li><code>$specificDate = new DateTime("2023-12-25");</code> : Date spécifique.</li>
+                    <li><code>$interval = $now->diff($specificDate);</code> : Différence entre deux dates.</li>
+                    <li><code>echo $now->format("d/m/Y H:i:s");</code> : Formate la date avec jour, mois, année et heure.</li>
+                </ul>
+            </li>
+            <li><strong>Connexion PDO</strong> :
+                <ul>
+                    <li><code>$pdo = new PDO("mysql:host=localhost;dbname=test", "user", "password");</code> : Connexion sécurisée à une base de données.</li>
+                    <li><code>$stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");</code> : Requête préparée pour éviter les injections SQL.</li>
+                    <li><code>$stmt->execute(['id' => $user_id]);</code> : Exécute la requête avec des paramètres.</li>
+                    <li><code>$results = $stmt->fetchAll(PDO::FETCH_ASSOC);</code> : Récupère les résultats en tableau associatif.</li>
+                </ul>
+            </li>
         </ul>
-
         <h4>JavaScript</h4>
         <ul>
-            <li>Déclarations : <code>let x = 10;</code>, <code>const name = "John";</code>.</li>
-            <li>Dates : <code>const now = new Date();</code>, <code>const formattedDate = now.toLocaleDateString("fr-FR");</code>.</li>
-            <li>DOM : <code>document.getElementById("myId");</code>, <code>element.style.color = "blue";</code>.</li>
+            <li><strong>Déclarations et Types</strong> :
+                <ul>
+                    <li><code>let x = 10;</code> : Déclare une variable modifiable.</li>
+                    <li><code>const name = "John";</code> : Déclare une constante (valeur immuable).</li>
+                    <li><code>console.log("Hello World");</code> : Affiche un message dans la console pour le débogage.</li>
+                </ul>
+            </li>
+            <li><strong>Dates et Heures</strong> :
+                <ul>
+                    <li><code>const now = new Date();</code> : Crée un objet de date pour l'heure actuelle.</li>
+                    <li><code>const year = now.getFullYear();</code> : Obtient l'année actuelle.</li>
+                    <li><code>const formattedDate = now.toLocaleDateString("fr-FR");</code> : Formate la date en français.</li>
+                    <li><code>now.setDate(now.getDate() + 5);</code> : Ajoute 5 jours à la date actuelle.</li>
+                </ul>
+            </li>
+            <li><strong>Fonctions</strong> :
+                <ul>
+                    <li><code>function add(a, b) { return a + b; }</code> : Fonction classique additionnant deux nombres.</li>
+                    <li><code>const add = (a, b) => a + b;</code> : Fonction fléchée (syntaxe concise) additionnant deux nombres.</li>
+                    <li><code>(function() { console.log("Auto-exécutée"); })();</code> : Fonction auto-invoquée (IIFE).</li>
+                </ul>
+            </li>
+            <li><strong>DOM (Document Object Model)</strong> :
+                <ul>
+                    <li><code>document.getElementById("myId");</code> : Sélectionne un élément par ID.</li>
+                    <li><code>document.querySelector(".myClass");</code> : Sélectionne le premier élément avec une classe spécifique.</li>
+                    <li><code>element.textContent = "Nouveau Texte";</code> : Change le texte d'un élément sélectionné.</li>
+                    <li><code>element.style.color = "blue";</code> : Change la couleur de texte de l'élément.</li>
+                </ul>
+            </li>
+            <li><strong>Événements</strong> :
+                <ul>
+                    <li><code>element.addEventListener("click", function() { alert("Clic détecté"); });</code> : Ajoute un écouteur d'événement de clic.</li>
+                    <li><code>element.removeEventListener("click", handlerFunction);</code> : Supprime un écouteur d'événement.</li>
+                </ul>
+            </li>
+            <li><strong>Promesses et Asynchrone</strong> :
+                <ul>
+                    <li><code>fetch("url").then(response => response.json()).then(data => console.log(data));</code> : Utilise fetch pour récupérer des données asynchrones.</li>
+                    <li><code>async function loadData() { const data = await fetch("url"); }</code> : Fonction asynchrone utilisant await pour attendre les données.</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
