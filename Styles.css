@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
 }
 
 header {
     background-color: #34495e;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
@@ -15,43 +16,48 @@ header h1 {
     margin: 0;
 }
 
-nav ul {
+nav ul.tabs {
     list-style-type: none;
-    margin: 10px 0 0 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #2c3e50;
 }
 
-nav li {
-    display: inline;
-    margin: 0 15px;
+nav ul.tabs li {
+    margin: 0 10px;
 }
 
-nav a {
+nav ul.tabs a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
+    display: block;
 }
 
-section {
-    padding: 40px 20px;
+nav ul.tabs a:hover,
+nav ul.tabs a.active {
+    background-color: #1abc9c;
 }
 
-section h2 {
-    border-bottom: 2px solid #34495e;
-    padding-bottom: 10px;
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 20px;
 }
 
-#skills ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-.project {
-    margin-bottom: 20px;
+.tab-content.active {
+    display: block;
 }
 
 footer {
     background-color: #34495e;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
